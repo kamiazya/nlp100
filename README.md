@@ -11,3 +11,15 @@
 > - 研究やデータ分析の進め方，作法，スキルを修得できます
 > - 問題を解くのに必要なデータ・コーパスを配布しています
 > - 言語はPythonを想定していますが，他の言語にも対応しています
+
+## 環境
+
+Python 3.8.1 を利用する。
+
+### pyenv, virtualenv での環境構築方法
+
+```bash
+pyenv install 3.8.1
+pyenv virtualenv 3.8.1 nlp100
+pyenv local nlp100
+```
