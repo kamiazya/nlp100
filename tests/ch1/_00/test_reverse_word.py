@@ -13,7 +13,7 @@ class TestRevarseSrting(unittest.TestCase):
         sys.stdout = sys.__stdout__
 
     def test_reverse_word(self):
-        import src.ch1._00.reverse_word
+        import src.ch1._00.reverse_word  # NOQA
         self.captor.seek(0)
         self.assertEqual(self.captor.read(), "desserts\n")
 

@@ -24,8 +24,13 @@ pyenv virtualenv 3.8.1 nlp100
 pyenv local nlp100
 ```
 
-## テスト
+## コマンド
 
 ```bash
-python -m unittest discover
+# Test
+pipenv run test
+# Lint
+pipenv run lint
+# Format
+pipenv run format
 ```
