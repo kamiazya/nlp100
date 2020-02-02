@@ -5,6 +5,6 @@
 ## 実行方法
 
 ```bash
-$ python src/main.py
+$ python reverse_word.py
 desserts
 ```
