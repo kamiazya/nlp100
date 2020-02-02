@@ -1,17 +1,8 @@
-import sys
 import unittest
-from io import StringIO
 from src.ch1._03.pi import main, format_word
 
 
 class TestPi(unittest.TestCase):
-
-    def setUp(self):
-        self.captor = StringIO()
-        sys.stdout = self.captor
-
-    def tearDown(self):
-        sys.stdout = sys.__stdout__
 
     def test_format_word(self):
         cases = [
