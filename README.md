@@ -23,3 +23,9 @@ pyenv install 3.8.1
 pyenv virtualenv 3.8.1 nlp100
 pyenv local nlp100
 ```
+
+## テスト
+
+```bash
+python -m unittest discover
+```
