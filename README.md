@@ -27,6 +27,10 @@ pyenv local nlp100
 ## コマンド
 
 ```bash
+# Install Dependencies
+pipenv install
+# Install Dependencies for develop
+pipenv install --dev
 # Test
 pipenv run test
 # Lint
