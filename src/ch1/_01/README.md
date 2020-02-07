@@ -6,5 +6,7 @@
 
 ```bash
 $ python patatokukashi.py
-desserts
+タクシー
+$ python patatokukashi_use_slice.py
+タクシー
 ```
