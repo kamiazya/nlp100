@@ -11,8 +11,8 @@ class TestTr(unittest.TestCase):
             (Path(__file__) / "../../../../src/ch2/hightemp.txt").resolve())
         result = tr("\t", " ", filename)
         command = f"cat {filename} | tr '\\t' ' '"
-        check_wc = subprocess.check_output(command, shell=True)
-        self.assertEqual(result, check_wc.decode())
+        check_tr = subprocess.check_output(command, shell=True)
+        self.assertEqual(result, check_tr.decode())
 
 
 if __name__ == "__main__":
