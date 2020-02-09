@@ -16,5 +16,7 @@ jobs:
           pipenv install --dev
       - name: Lint
         run: pipenv run lint
+      - name: Type Check
+        run: pipenv run typecheck
       - name: Test
         run: pipenv run test
