@@ -35,6 +35,8 @@ pipenv install --dev
 pipenv run test
 # Lint
 pipenv run lint
+# TypeCheck
+pipenv run typecheck
 # Format
 pipenv run format
 ```
