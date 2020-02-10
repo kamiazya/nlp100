@@ -1,11 +1,12 @@
+from os import linesep
 from pathlib import Path
-from typing import Optional, List
+from typing import Optional
 
 
 def cut(filename: str, *, f: int, d: Optional[str] = "\t") -> str:
     with open(filename, "r") as file:
-        lines: List[str] = file.readlines()
-        return "\n".join(map(lambda l: l.rstrip().split(d)[f-1], lines)) + "\n"
+        return linesep.join(
+            map(lambda line: line.rstrip().split(d)[f-1], file)) + linesep
 
 
 if __name__ == "__main__":
