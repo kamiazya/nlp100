@@ -1,4 +1,4 @@
-from typing import List, Iterator
+from typing import List
 from functools import reduce
 
 noise_chars: List[str] = [",", "."]
