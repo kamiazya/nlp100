@@ -19,9 +19,7 @@ def shuffle_paragraph(paragraph: str) -> str:
 
 
 if __name__ == "__main__":
-    paragraph = (
-        "I couldn't believe that I could actually understand "
-        "what I was reading : the phenomenal power of the human mind ."
-    )
+    paragraph = "I couldn't believe that I could actually understand "\
+                "what I was reading : the phenomenal power of the human mind ."
 
     print(shuffle_paragraph(paragraph))

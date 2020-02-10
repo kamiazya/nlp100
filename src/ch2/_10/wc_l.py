@@ -15,7 +15,7 @@ def wc_l(*filepath: str) -> int:
     with ExitStack() as stack:
         for fp in filepath:
             f = stack.enter_context(open(fp, 'r'))
-            c += len(f.readlines())
+            c += sum([1 for _ in f])
     return c
 
 
