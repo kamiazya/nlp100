@@ -13,7 +13,7 @@ jobs:
       - uses: Gr1N/setup-poetry@v1
       - name: Install dependencies
         run: |
-          poetry install
+          poetry install --no-root
           poetry shell
       - name: Lint
         run: flake8 --show-source .

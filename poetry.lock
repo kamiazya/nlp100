@@ -96,8 +96,8 @@ python-versions = "*"
 version = "3.7.4.1"
 
 [metadata]
-content-hash = "e745486c44cbbf0c3e7738c025bf5b863ac6f8f378edb0f1fe8e32d8e112de29"
-python-versions = "^3.8.1"
+content-hash = "2f66caa073e25508dd7698e7213baf75573a0bca97520ba9550e381be71db9d1"
+python-versions = "^3.8"
 
 [metadata.files]
 autopep8 = [
