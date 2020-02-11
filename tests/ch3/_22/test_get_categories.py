@@ -1,6 +1,6 @@
 import pytest
 
-from src.ch3._22.categories import get_categories
+from src.ch3._22.get_categories import get_categories
 
 
 @pytest.mark.parametrize(
