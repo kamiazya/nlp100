@@ -5,7 +5,6 @@ from typing import List
 
 from src.ch3._20.ndjson import parse
 
-
 _media_regex = re.compile(r"ファイル:(.+?)\|")
 
 
