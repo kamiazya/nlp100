@@ -1,19 +1,15 @@
 import subprocess
-import unittest
 from pathlib import Path
+
+import pytest
 
 from src.ch2._12.cut import cut
 
 
-class TestCut(unittest.TestCase):
-    def test_cut(self):
-        for i in range(1, 5):
-            filename = str((Path(__file__) / "../../../../src/ch2/hightemp.txt").resolve())
-            result = cut(filename, f=i)
-            command = f"cut -f {i} {filename}"
-            check_cut = subprocess.check_output(command, shell=True)
-            self.assertEqual(result, check_cut.decode())
-
-
-if __name__ == "__main__":
-    unittest.main()
+@pytest.mark.parametrize("i", range(1, 5))
+def test_cut(i):
+    filename = str((Path(__file__) / "../../../../src/ch2/hightemp.txt").resolve())
+    result = cut(filename, f=i)
+    command = f"cut -f {i} {filename}"
+    check_cut = subprocess.check_output(command, shell=True)
+    assert result == check_cut.decode()

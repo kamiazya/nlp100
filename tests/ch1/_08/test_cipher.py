@@ -1,22 +1,18 @@
-import unittest
+import pytest
 
 from src.ch1._08.cipher import decode
 from src.ch1._08.cipher import encode
 
 
-class TestCipher(unittest.TestCase):
-    def test_encode_decode(self):
-        cases = [
-            ("hoge", "sltv"),
-            ("I have a pen", "I szev z kvm"),
-            ("abcdefghijklmnopqrstuvwxyz", "zyxwvutsrqponmlkjihgfedcba"),
-        ]
-
-        for (string, expected_encoded) in cases:
-            encoded = encode(string)
-            self.assertEqual(encoded, expected_encoded)
-            self.assertEqual(decode(encoded), string)
-
-
-if __name__ == "__main__":
-    unittest.main()
+@pytest.mark.parametrize(
+    "string,expected_encoded",
+    [
+        ("hoge", "sltv"),
+        ("I have a pen", "I szev z kvm"),
+        ("abcdefghijklmnopqrstuvwxyz", "zyxwvutsrqponmlkjihgfedcba"),
+    ],
+)
+def test_encode_decode(string, expected_encoded):
+    encoded = encode(string)
+    assert encoded == expected_encoded
+    assert decode(encoded) == string

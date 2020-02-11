@@ -21,4 +21,4 @@ jobs:
       - name: Type Check
         run: poetry run mypy
       - name: Test
-        run: poetry run python -m unittest discover -v
+        run: poetry run pytest

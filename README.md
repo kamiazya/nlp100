@@ -34,6 +34,7 @@ poetry install --no-dev
 # Install Dependencies for develop
 poetry install
 # Test
+poetry run pytest
 python -m unittest discover -v
 # Lint
 poetry run flake8 --show-source .

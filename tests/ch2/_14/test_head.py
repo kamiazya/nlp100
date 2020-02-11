@@ -1,31 +1,19 @@
-import sys
-import unittest
 from io import StringIO
+
+import pytest
 
 from src.ch2._14.head import head
 
 
-class TestHead(unittest.TestCase):
-    def setUp(self):
-        self.captor = StringIO()
-        sys.stdout = self.captor
-        self.io = StringIO("1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n")
-
-    def tearDown(self):
-        sys.stdout = sys.__stdout__
-        self.io.close()
-
-    def test_head(self):
-        self.assertEqual(head(self.io), "1\n")
-
-    def test_head_3(self):
-        self.assertEqual(head(self.io, n=3), "1\n2\n3\n")
-
-    def test_head_10(self):
-        self.assertEqual(
-            head(self.io, n=10), "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n",
-        )
+@pytest.fixture
+def stdin():
+    return StringIO("1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n")
 
 
-if __name__ == "__main__":
-    unittest.main()
+def test_head(stdin):
+    assert head(stdin) == "1\n"
+
+
+@pytest.mark.parametrize("expected,n", [("1\n2\n3\n", 3), ("1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n", 10)])
+def test_head_n(stdin, expected: str, n: int):
+    assert head(stdin, n=n) == expected
