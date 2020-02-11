@@ -35,7 +35,6 @@ poetry install --no-dev
 poetry install
 # Test
 poetry run pytest
-python -m unittest discover -v
 # Lint
 poetry run flake8 --show-source .
 poetry run poetry run black . --check
