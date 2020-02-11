@@ -1,8 +1,10 @@
 import subprocess
 from pathlib import Path
+
 import pytest
 
-from src.ch2._17.uniq import uniq, main
+from src.ch2._17.uniq import main
+from src.ch2._17.uniq import uniq
 
 
 @pytest.mark.parametrize(
