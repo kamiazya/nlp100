@@ -1,6 +1,6 @@
 a = "パトカー"
 b = "タクシー"
 
-join = ''.join
+join = "".join
 
 print(join((map(join, zip(a, b)))))

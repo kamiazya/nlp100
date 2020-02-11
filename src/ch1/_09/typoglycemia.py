@@ -1,5 +1,5 @@
-from typing import List
 import random
+from typing import List
 
 
 def _shuffle_word(word: str) -> str:
@@ -7,9 +7,9 @@ def _shuffle_word(word: str) -> str:
     length: int = len(chars)
     if length <= 4:
         return word
-    shuffle_container: List[str] = chars[1:length-1]
+    shuffle_container: List[str] = chars[1 : length - 1]
     random.shuffle(shuffle_container)
-    return "".join([chars[0], *shuffle_container, chars[length-1]])
+    return "".join([chars[0], *shuffle_container, chars[length - 1]])
 
 
 def shuffle_paragraph(paragraph: str) -> str:
@@ -19,7 +19,9 @@ def shuffle_paragraph(paragraph: str) -> str:
 
 
 if __name__ == "__main__":
-    paragraph = "I couldn't believe that I could actually understand "\
-                "what I was reading : the phenomenal power of the human mind ."
+    paragraph = (
+        "I couldn't believe that I could actually understand "
+        "what I was reading : the phenomenal power of the human mind ."
+    )
 
     print(shuffle_paragraph(paragraph))

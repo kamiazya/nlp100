@@ -10,13 +10,15 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: 3.8
+      - uses: Gr1N/setup-poetry@v1
       - name: Install dependencies
-        run: |
-          pip install pipenv
-          pipenv install --dev
+        run: poetry install --no-root
       - name: Lint
-        run: pipenv run lint
+        run: |
+          poetry run flake8 --show-source .
+          poetry run poetry run black . --check
+          poetry run isort -rc -sl -c .
       - name: Type Check
-        run: pipenv run typecheck
+        run: poetry run mypy
       - name: Test
-        run: pipenv run test
+        run: poetry run pytest

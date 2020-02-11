@@ -27,16 +27,23 @@ pyenv local nlp100
 ## コマンド
 
 ```bash
+# Activate shell
+poetry shell
 # Install Dependencies
-pipenv install
+poetry install --no-dev
 # Install Dependencies for develop
-pipenv install --dev
+poetry install
 # Test
-pipenv run test
+poetry run pytest
+python -m unittest discover -v
 # Lint
-pipenv run lint
+poetry run flake8 --show-source .
+poetry run poetry run black . --check
+poetry run isort -rc -sl -c .
 # TypeCheck
-pipenv run typecheck
+poetry run mypy
 # Format
-pipenv run format
+poetry run autopep8 -ivr .
+poetry run black .
+poetry run isort -rc -sl .
 ```
