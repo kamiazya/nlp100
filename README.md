@@ -36,9 +36,9 @@ poetry install
 # Test
 python -m unittest discover -v
 # Lint
-flake8 --show-source .
+poetry run flake8 --show-source .
 # TypeCheck
-mypy
+poetry run mypy
 # Format
-autopep8 -ivr .
+poetry run autopep8 -ivr .
 ```
