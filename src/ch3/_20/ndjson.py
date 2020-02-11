@@ -1,7 +1,10 @@
 import json
-from src.ch3._20.find_one import find_one
-from typing import Any, Generator, Iterable
 from pathlib import Path
+from typing import Any
+from typing import Generator
+from typing import Iterable
+
+from src.ch3._20.find_one import find_one
 
 
 def parse(json_lines: Iterable[str]) -> Generator[Any, None, None]:

@@ -1,5 +1,7 @@
-from typing import Callable, Iterable, Optional, TypeVar
-
+from typing import Callable
+from typing import Iterable
+from typing import Optional
+from typing import TypeVar
 
 T = TypeVar("T")
 
