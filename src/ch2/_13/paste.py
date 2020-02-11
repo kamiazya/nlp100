@@ -1,5 +1,5 @@
-from os import linesep
 from contextlib import ExitStack
+from os import linesep
 from pathlib import Path
 from typing import Iterable
 

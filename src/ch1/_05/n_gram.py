@@ -1,4 +1,5 @@
-from typing import List, Iterator
+from typing import Iterator
+from typing import List
 
 
 def n_gram(paragraph: str, *, n: int = 1) -> Iterator[str]:

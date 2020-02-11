@@ -1,7 +1,8 @@
+import subprocess
 import unittest
 from contextlib import ExitStack
 from pathlib import Path
-import subprocess
+
 from src.ch2._13.paste import paste
 
 

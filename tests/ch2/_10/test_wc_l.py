@@ -1,6 +1,7 @@
+import subprocess
 import unittest
 from pathlib import Path
-import subprocess
+
 from src.ch2._10.wc_l import wc_l
 
 

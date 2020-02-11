@@ -1,5 +1,10 @@
 import unittest
-from src.ch1._05.n_gram import main, n_gram, bi_gram, word_n_gram, word_bi_gram
+
+from src.ch1._05.n_gram import bi_gram
+from src.ch1._05.n_gram import main
+from src.ch1._05.n_gram import n_gram
+from src.ch1._05.n_gram import word_bi_gram
+from src.ch1._05.n_gram import word_n_gram
 
 
 class TestNGram(unittest.TestCase):

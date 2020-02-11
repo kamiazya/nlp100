@@ -1,13 +1,5 @@
-import sys
-from pathlib import Path
-from select import select
 from contextlib import ExitStack
-
-
-def is_pipe():
-    if select([sys.stdin], [], [], 0.0)[0]:
-        return True
-    return False
+from pathlib import Path
 
 
 def wc_l(*filepath: str) -> int:

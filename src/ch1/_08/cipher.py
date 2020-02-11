@@ -1,5 +1,5 @@
-from typing import Set, Callable
-
+from typing import Callable
+from typing import Set
 
 _lowercase_letters: Set[int] = {*range(ord("a"), ord("z") + 1)}
 

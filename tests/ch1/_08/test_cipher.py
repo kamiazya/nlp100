@@ -1,5 +1,7 @@
 import unittest
-from src.ch1._08.cipher import encode, decode
+
+from src.ch1._08.cipher import decode
+from src.ch1._08.cipher import encode
 
 
 class TestCipher(unittest.TestCase):

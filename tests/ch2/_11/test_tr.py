@@ -1,6 +1,7 @@
+import subprocess
 import unittest
 from pathlib import Path
-import subprocess
+
 from src.ch2._11.tr import tr
 
 

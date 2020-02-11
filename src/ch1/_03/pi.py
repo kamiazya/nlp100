@@ -1,5 +1,5 @@
-from typing import List
 from functools import reduce
+from typing import List
 
 noise_chars: List[str] = [",", "."]
 

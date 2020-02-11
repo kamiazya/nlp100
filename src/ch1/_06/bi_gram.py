@@ -1,4 +1,5 @@
-from typing import Set, Iterator
+from typing import Iterator
+from typing import Set
 
 
 def bi_gram(paragraph: str) -> Iterator[str]:

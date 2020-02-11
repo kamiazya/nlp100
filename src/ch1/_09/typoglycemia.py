@@ -1,5 +1,5 @@
-from typing import List
 import random
+from typing import List
 
 
 def _shuffle_word(word: str) -> str:

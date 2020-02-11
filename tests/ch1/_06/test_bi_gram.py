@@ -1,14 +1,13 @@
 import unittest
-from src.ch1._06.bi_gram import (
-    bi_gram,
-    X,
-    Y,
-    UNION,
-    INTERSECTION,
-    DIFFERENCE,
-    X_HAS_SE,
-    Y_HAS_SE,
-)
+
+from src.ch1._06.bi_gram import DIFFERENCE
+from src.ch1._06.bi_gram import INTERSECTION
+from src.ch1._06.bi_gram import UNION
+from src.ch1._06.bi_gram import X_HAS_SE
+from src.ch1._06.bi_gram import Y_HAS_SE
+from src.ch1._06.bi_gram import X
+from src.ch1._06.bi_gram import Y
+from src.ch1._06.bi_gram import bi_gram
 
 
 class TestBiGram(unittest.TestCase):

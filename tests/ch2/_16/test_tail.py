@@ -1,7 +1,8 @@
 import sys
 import unittest
-from src.ch2._16.split import split
 from io import StringIO
+
+from src.ch2._16.split import split
 
 
 class TestTail(unittest.TestCase):

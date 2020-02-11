@@ -1,7 +1,8 @@
 import sys
 import unittest
-from src.ch2._15.tail import tail
 from io import StringIO
+
+from src.ch2._15.tail import tail
 
 
 class TestTail(unittest.TestCase):

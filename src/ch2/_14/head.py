@@ -1,7 +1,8 @@
+from argparse import ArgumentParser
+from argparse import FileType
+from itertools import islice
 from sys import stdout
 from typing import IO
-from itertools import islice
-from argparse import ArgumentParser, FileType
 
 
 def head(io_: IO[str], *, n: int = 1) -> str:

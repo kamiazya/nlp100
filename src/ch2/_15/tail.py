@@ -1,7 +1,8 @@
+from argparse import ArgumentParser
+from argparse import FileType
+from collections import deque
 from sys import stdout
 from typing import IO
-from argparse import ArgumentParser, FileType
-from collections import deque
 
 
 def tail(io_: IO[str], *, n: int = 1) -> str:

@@ -1,4 +1,5 @@
 import unittest
+
 from src.ch1._09.typoglycemia import shuffle_paragraph
 
 

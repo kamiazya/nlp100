@@ -1,8 +1,10 @@
+from argparse import ArgumentParser
+from argparse import FileType
 from contextlib import ExitStack
-from typing import IO, Iterator
 from itertools import islice
-from argparse import ArgumentParser, FileType
 from pathlib import Path
+from typing import IO
+from typing import Iterator
 
 
 def split(io_: IO[str], *, N: int = 1) -> Iterator[str]:

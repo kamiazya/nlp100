@@ -17,6 +17,7 @@ jobs:
         run: |
           poetry run flake8 --show-source .
           poetry run poetry run black . --check
+          poetry run isort -rc -sl -c .
       - name: Type Check
         run: poetry run mypy
       - name: Test

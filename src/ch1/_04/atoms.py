@@ -1,4 +1,6 @@
-from typing import List, Set, Tuple
+from typing import List
+from typing import Set
+from typing import Tuple
 
 
 def main():

@@ -1,7 +1,8 @@
 import sys
 import unittest
-from src.ch2._14.head import head
 from io import StringIO
+
+from src.ch2._14.head import head
 
 
 class TestHead(unittest.TestCase):

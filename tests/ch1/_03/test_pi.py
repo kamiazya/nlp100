@@ -1,5 +1,7 @@
 import unittest
-from src.ch1._03.pi import main, format_word
+
+from src.ch1._03.pi import format_word
+from src.ch1._03.pi import main
 
 
 class TestPi(unittest.TestCase):
