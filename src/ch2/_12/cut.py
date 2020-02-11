@@ -5,8 +5,7 @@ from typing import Optional
 
 def cut(filename: str, *, f: int, d: Optional[str] = "\t") -> str:
     with open(filename, "r") as file:
-        return linesep.join(
-            map(lambda line: line.rstrip().split(d)[f-1], file)) + linesep
+        return linesep.join(map(lambda line: line.rstrip().split(d)[f - 1], file)) + linesep
 
 
 if __name__ == "__main__":

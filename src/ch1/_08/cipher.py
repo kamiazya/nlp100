@@ -11,9 +11,7 @@ def _encode(c: int) -> int:
 
 
 def _decode(c: int) -> int:
-    return _cipher_magic_number - c \
-        if _cipher_magic_number - c in _lowercase_letters \
-        else c
+    return _cipher_magic_number - c if _cipher_magic_number - c in _lowercase_letters else c
 
 
 def _cipher(converter: Callable[[int], int]) -> Callable[[str], str]:

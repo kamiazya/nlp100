@@ -14,7 +14,9 @@ jobs:
       - name: Install dependencies
         run: poetry install --no-root
       - name: Lint
-        run: poetry run flake8 --show-source .
+        run: |
+          poetry run flake8 --show-source .
+          poetry run poetry run black . --check
       - name: Type Check
         run: poetry run mypy
       - name: Test

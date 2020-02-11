@@ -3,7 +3,6 @@ from src.ch1._08.cipher import encode, decode
 
 
 class TestCipher(unittest.TestCase):
-
     def test_encode_decode(self):
         cases = [
             ("hoge", "sltv"),

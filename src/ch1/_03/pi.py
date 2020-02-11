@@ -9,11 +9,10 @@ def format_word(word: str) -> str:
 
 
 def main() -> List[int]:
-    paragraph = "Now I need a drink, alcoholic of course, "\
-                "after the heavy lectures involving quantum mechanics."
+    paragraph = "Now I need a drink, alcoholic of course, " "after the heavy lectures involving quantum mechanics."
     return list(map(len, map(format_word, paragraph.split(" "))))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     result = main()
     print(result)

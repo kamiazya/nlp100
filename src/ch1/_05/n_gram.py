@@ -2,7 +2,7 @@ from typing import List, Iterator
 
 
 def n_gram(paragraph: str, *, n: int = 1) -> Iterator[str]:
-    return map(lambda i: paragraph[i:i+n], range(len(paragraph)-n+1))
+    return map(lambda i: paragraph[i : i + n], range(len(paragraph) - n + 1))
 
 
 def bi_gram(paragraph: str) -> Iterator[str]:
@@ -12,7 +12,7 @@ def bi_gram(paragraph: str) -> Iterator[str]:
 def word_n_gram(paragraph: str, *, n: int = 1) -> Iterator[str]:
     sep = " "
     words = paragraph.split(sep)
-    return map(lambda i: sep.join(words[i:i+n]), range(len(words)-n+1))
+    return map(lambda i: sep.join(words[i : i + n]), range(len(words) - n + 1))
 
 
 def word_bi_gram(paragraph: str) -> Iterator[str]:
@@ -24,6 +24,6 @@ def main() -> Iterator[str]:
     return word_bi_gram(paragraph)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     result: List[str] = list(main())
     print(result)

@@ -5,10 +5,8 @@ from src.ch2._11.tr import tr
 
 
 class TestTr(unittest.TestCase):
-
     def test_tr(self):
-        filename = str(
-            (Path(__file__) / "../../../../src/ch2/hightemp.txt").resolve())
+        filename = str((Path(__file__) / "../../../../src/ch2/hightemp.txt").resolve())
         result = tr("\t", " ", filename)
         command = f"cat {filename} | tr '\\t' ' '"
         check_tr = subprocess.check_output(command, shell=True)

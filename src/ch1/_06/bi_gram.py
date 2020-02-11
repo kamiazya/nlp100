@@ -3,7 +3,7 @@ from typing import Set, Iterator
 
 def bi_gram(paragraph: str) -> Iterator[str]:
     n = 2
-    return map(lambda i: paragraph[i:i+n], range(len(paragraph)-n+1))
+    return map(lambda i: paragraph[i : i + n], range(len(paragraph) - n + 1))
 
 
 x: str = "paraparaparadise"
