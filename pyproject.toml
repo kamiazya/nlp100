@@ -29,11 +29,8 @@ flake8 = "^3.7.9"
 mypy = "^0.761"
 black = "^19.10b0"
 
-[flake8]
-max-line-length = 120
-
 [tool.black]
-line-length = 120
+line-length = 100
 
 [build-system]
 requires = ["poetry>=0.12"]

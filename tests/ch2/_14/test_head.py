@@ -8,7 +8,7 @@ class TestHead(unittest.TestCase):
     def setUp(self):
         self.captor = StringIO()
         sys.stdout = self.captor
-        self.io = StringIO(("1\n" "2\n" "3\n" "4\n" "5\n" "6\n" "7\n" "8\n" "9\n" "10\n" "11\n"))
+        self.io = StringIO("1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n")
 
     def tearDown(self):
         sys.stdout = sys.__stdout__
@@ -18,11 +18,11 @@ class TestHead(unittest.TestCase):
         self.assertEqual(head(self.io), "1\n")
 
     def test_head_3(self):
-        self.assertEqual(head(self.io, n=3), ("1\n" "2\n" "3\n"))
+        self.assertEqual(head(self.io, n=3), "1\n2\n3\n")
 
     def test_head_10(self):
         self.assertEqual(
-            head(self.io, n=10), ("1\n" "2\n" "3\n" "4\n" "5\n" "6\n" "7\n" "8\n" "9\n" "10\n"),
+            head(self.io, n=10), "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n",
         )
 
 

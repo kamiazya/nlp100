@@ -8,7 +8,7 @@ class TestTail(unittest.TestCase):
     def setUp(self):
         self.captor = StringIO()
         sys.stdout = self.captor
-        self.io = StringIO(("1\n" "2\n" "3\n" "4\n" "5\n" "6\n" "7\n" "8\n" "9\n" "10\n" "11\n"))
+        self.io = StringIO("1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n")
 
     def tearDown(self):
         sys.stdout = sys.__stdout__
@@ -18,11 +18,11 @@ class TestTail(unittest.TestCase):
         self.assertEqual(tail(self.io), "11\n")
 
     def test_tail_3(self):
-        self.assertEqual(tail(self.io, n=3), ("9\n" "10\n" "11\n"))
+        self.assertEqual(tail(self.io, n=3), "9\n10\n11\n")
 
     def test_tail_10(self):
         self.assertEqual(
-            tail(self.io, n=10), ("2\n" "3\n" "4\n" "5\n" "6\n" "7\n" "8\n" "9\n" "10\n" "11\n"),
+            tail(self.io, n=10), "2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n",
         )
 
 

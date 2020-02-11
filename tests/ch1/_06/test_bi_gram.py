@@ -15,7 +15,8 @@ class TestBiGram(unittest.TestCase):
     def test_bi_gram(self):
         paragraph: str = "I am an NLPer"
         self.assertEqual(
-            list(bi_gram(paragraph)), ["I ", " a", "am", "m ", " a", "an", "n ", " N", "NL", "LP", "Pe", "er"],
+            list(bi_gram(paragraph)),
+            ["I ", " a", "am", "m ", " a", "an", "n ", " N", "NL", "LP", "Pe", "er"],
         )
 
     def test_X(self):
