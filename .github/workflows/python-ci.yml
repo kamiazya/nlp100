@@ -12,7 +12,9 @@ jobs:
           python-version: 3.8
       - uses: Gr1N/setup-poetry@v1
       - name: Install dependencies
-        run: poetry install
+        run: |
+          poetry install
+          poetry shell
       - name: Lint
         run: flake8 --show-source .
       - name: Type Check
