@@ -239,7 +239,7 @@ checkqa-mypy = ["mypy (v0.761)"]
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xmlschema"]
 
 [[package]]
-category = "dev"
+category = "main"
 description = "Alternative regular expression module, to replace re."
 name = "regex"
 optional = false
@@ -287,7 +287,7 @@ python-versions = "*"
 version = "0.1.8"
 
 [metadata]
-content-hash = "bcc175d648891b6796fe13610dd9606ff7161115698ae01e517847e354ddced3"
+content-hash = "c81614fc3ea2a673dccea85364033edfc05ac2273184ad29990392faae2d7181"
 python-versions = "^3.8"
 
 [metadata.files]
