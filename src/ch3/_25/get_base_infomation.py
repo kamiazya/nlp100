@@ -12,8 +12,7 @@ _base_infomation_regex = regex.compile(
 )
 
 _base_infomation_item_regex = regex.compile(
-    r"(?<=[\|^])(.+?)\s*=\s*((\{\{.+?\}\})|(.+?))(?=[\|$]?)",
-    flags=(regex.MULTILINE + regex.DOTALL),
+    r"(?<=[\|^])(.*?)\s*=\s*(.*)", flags=(regex.MULTILINE),  #
 )
 
 
@@ -36,14 +35,18 @@ def get_base_infomation(text: str) -> Optional[Dict[str, str]]:
 
 def main(file: IO[str]):
     result = {}
-    for data in parse(file):
-        title = data["title"]
-        article = data["text"]
-        if type(article) is str and type(title) is str:
-            info = get_base_infomation(article)
-            if info is not None:
-                result[title] = info
-    print(result)
+    data = next(parse(file))
+    # for data in parse(file):
+    title = data["title"]
+    article = data["text"]
+    if type(article) is str and type(title) is str:
+        info = get_base_infomation(article)
+        if info is not None:
+            result[title] = info
+
+    import json
+
+    print(json.dumps(result))
 
 
 if __name__ == "__main__":
