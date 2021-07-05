@@ -22,7 +22,7 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.8"
-regex = "^2020.1.8"
+regex = "^2021.7.5"
 
 [tool.poetry.dev-dependencies]
 autopep8 = "^1.5"
